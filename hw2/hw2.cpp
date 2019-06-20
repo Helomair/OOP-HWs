@@ -70,7 +70,7 @@ struct Edge
   	bool operator < (const Edge& b) const
     {
     	if(w == b.w)  return node < b.node;
-    	return w > b.w;
+    	return w < b.w;
     }
 };
 vector<Resource> resource;
@@ -81,7 +81,7 @@ int main(int argc, char** argv)
 {
 	int n;
 	se = atoi(argv[0]);
-	gen.seed(se);
+	gen.seed(1);
 	freopen("request.txt","r",stdin);
 	freopen("result.txt","w",stdout);
 	cin >> n;
